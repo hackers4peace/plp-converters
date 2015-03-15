@@ -43,12 +43,12 @@ fs.readdir(directoryDataInputDir, function(err, files) {
       convertedProfile['about']['image'] = profileJson['about']['image'];
     }
 
-    if (profileJson['about']['address']){
+    if (profileJson['about']['address'][0]){
       convertedProfile['about']['address'] = {
         streetAddress: undefined,
         postalCode: undefined,
-        addressLocality: profileJson['about']['address']['city'],
-        addressCountry: profileJson['about']['address']['country']
+        addressLocality: profileJson['about']['address'][0]['city'],
+        addressCountry: profileJson['about']['address'][0]['country']
       }
     }
 
