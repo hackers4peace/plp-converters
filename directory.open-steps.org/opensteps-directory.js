@@ -97,7 +97,7 @@ fs.readdir(directoryDataInputDir, function(err, files) {
       }
 
       if (profileJson['about']['website']){
-        convertedProfile['about']['website'] = profileJson['about']['website'];
+        convertedProfile['about']['url'] = profileJson['about']['website'];
       }
 
       if (profileJson['about']['logo']){
