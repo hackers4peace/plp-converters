@@ -27,7 +27,13 @@ fs.readdir(directoryDataInputDir, function(err, files) {
       type: 'Listing',
       about: {
         id: profileJson['about']['@id'],
-        type: profileJson['about']['@type']
+        type: profileJson['about']['@type'],
+        describedBy: {
+          id: profileJson['about']['@id'] + '/',
+          "plp:prototype": {
+            "git:tag": "0.1"
+          }
+        }
       }
     }
 
