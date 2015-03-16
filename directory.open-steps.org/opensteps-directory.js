@@ -31,7 +31,7 @@ fs.readdir(directoryDataInputDir, function(err, files) {
         describedBy: {
           id: profileJson['about']['@id'] + '/',
           "plp:prototype": {
-            "git:tag": "0.1"
+            "git:tag": "v0.1.0"
           }
         }
       }
