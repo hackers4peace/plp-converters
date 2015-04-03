@@ -1,5 +1,10 @@
 # PLP Scripts: Converters
 
+```shell
+npm install
+```
+
+
 ## Documentation
 
 Please see the centralized PLP online documentation for further details:
