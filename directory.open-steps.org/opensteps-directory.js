@@ -22,11 +22,14 @@ fs.readdir(directoryDataInputDir, function(err, files) {
 
     var convertedProfile;
 
+    var directoryUrl = 'http://profiles.open-steps.org:5001/' + file;
+    var providerUrl = 'http://profiles.open-steps.org:5000/' + profileJson['about']['@id'].split("/").pop();
+
     convertedProfile = {
-      id: 'http://profiles.open-steps.org/directory/' + file,
+      id: directoryUrl,
       type: 'Listing',
       about: {
-        id: profileJson['about']['@id'],
+        id: providerUrl,
         type: profileJson['about']['@type'],
         describedBy: {
           id: profileJson['about']['@id'] + '/',
